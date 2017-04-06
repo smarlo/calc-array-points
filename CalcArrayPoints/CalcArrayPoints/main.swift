@@ -53,7 +53,7 @@ func subtract(array: [Int]) -> Int {
 }
 
 func multiply(array: [Int]) -> Int {
-    var product = 0
+    var product = 1
     for num in array {
         product = num * product
     }
@@ -109,38 +109,38 @@ func subtract(_ points: (Int, Int)...) -> (Int, Int) {
 // Dictionary representation 
 
 // Ints
-func add(p1: [String : Int]?, p2: [String : Int]?) -> [String : Int] {
-    var sum = ["x": Int(), "y": Int()]
+func add(p1: [String : Int]?, p2: [String : Int]?) -> [String : Int]? {
+    var sum : [String : Int] = [:]
     if (p1?["x"] != nil && p2?["x"] != nil && p1?["y"] != nil && p2?["y"] != nil) {
-        sum["x"] = (p1?["x"])! + (p2?["y"])!
+        sum["x"] = (p1?["x"])! + (p2?["x"])!
         sum["y"] = (p1?["y"])! + (p2?["y"])!
     }
     return sum
 }
 
-func subtract(p1: [String : Int]?, p2: [String : Int]?) -> [String : Int] {
-    var diff = ["x": Int(), "y": Int()]
+func subtract(p1: [String : Int]?, p2: [String : Int]?) -> [String : Int]? {
+    var diff : [String : Int] = [:]
     if (p1?["x"] != nil && p2?["x"] != nil && p1?["y"] != nil && p2?["y"] != nil) {
-        diff["x"] = (p1?["x"]!)! - (p2?["y"]!)!
+        diff["x"] = (p1?["x"]!)! - (p2?["x"]!)!
         diff["y"] = (p1?["y"]!)! - (p2?["y"]!)!
     }
     return diff
 }
 
 // Doubles
-func add(p1: [String : Double]?, p2: [String : Double]?) -> [String : Double] {
-    var sum = ["x": Double(), "y": Double()]
+func add(p1: [String : Double]?, p2: [String : Double]?) -> [String : Double]? {
+    var sum : [String : Double] = [:]
     if (p1?["x"] != nil && p2?["x"] != nil && p1?["y"] != nil && p2?["y"] != nil) {
-        sum["x"] = (p1?["x"]!)! + (p2?["y"]!)!
+        sum["x"] = (p1?["x"]!)! + (p2?["x"]!)!
         sum["y"] = (p1?["y"]!)! + (p2?["y"]!)!
     }
     return sum
 }
 
-func subtract(p1: [String : Double]?, p2: [String : Double]?) -> [String : Double] {
-    var diff = ["x": Double(), "y": Double()]
+func subtract(p1: [String : Double]?, p2: [String : Double]?) -> [String : Double]? {
+    var diff : [String : Double] = [:]
     if (p1?["x"] != nil && p2?["x"] != nil && p1?["y"] != nil && p2?["y"] != nil) {
-        diff["x"] = (p1?["x"]!)! - (p2?["y"]!)!
+        diff["x"] = (p1?["x"]!)! - (p2?["x"]!)!
         diff["y"] = (p1?["y"]!)! - (p2?["y"]!)!
     }
     return diff
